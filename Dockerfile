@@ -7,5 +7,5 @@ RUN apk add --no-cache --virtual .build-deps curl ca-certificates \
  && chmod +x /frp/frp_0.32.0_linux_amd64/frpc \
  && chmod +x /frp/frp_0.32.0_linux_amd64/frpc.ini \
  && rm -rf /root/frp_0.32.0_linux_amd64.zip
-CMD ["/frp/frp_0.32.0_linux_amd64/frpc", "-c /frp/frp_0.32.0_linux_amd64/frpc.ini"]
+CMD /frp/frp_0.32.0_linux_amd64/frpc -c /frp/frp_0.32.0_linux_amd64/frpc.ini
 EXPOSE 22 9577
